@@ -1,0 +1,390 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;    
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: black;
+    color: white;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;    
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.logo{
+    width: 140px;
+}
+.list{
+    display: flex;
+    list-style: none;
+
+}
+.list a{
+    font-size: 20px;
+    color: white;
+    margin: 10px 20px;
+    text-decoration: none;
+    position: relative;
+}
+.list a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background: indianred;
+    transition: 0.5s;
+}
+.list a:hover::after{
+    width: 100%;
+}
+.ptext{
+    font-size: 30px;
+    margin-top: 20%;
+}
+.ptext h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+h1 span{
+    color: indianred;
+}
+
+/*----------------------------------about-----------------------*/
+#about{
+    padding: 80px 0;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+}
+.about-col-1{
+    flex-basis: 35%;
+
+}.about-col-1 img{
+    border-radius: 15px;
+    width: 100%;
+}
+.about-col-2{
+    flex-basis: 60%;   
+    color: grey;
+ 
+}
+.about-col-2 h1{
+    color: white;
+    font-size: 60px;
+    font-weight: 600;
+}
+.tab{
+    margin: 20px 0 40px;
+    display: flex;
+    position: relative;
+
+}
+.tab p{
+    margin-right: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+
+}
+.tab p::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background: indianred;
+    left: 0;
+    bottom: -6px;
+    transition: .5s;
+}
+.tab p:hover::after{
+    width: 100%;
+}
+.tab p.active-link ::after{
+    width: 50%;
+
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: indianred;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+
+}
+/*----------------------------services--------------------*/
+#services{
+    
+    padding: 50px 0;
+    
+}
+.sub-title{
+    color: white;
+    font-size: 60px;
+
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+}
+.services-list div{
+    background: rgb(45, 44, 44);
+    border-radius: 10px;
+    padding:30px;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    transition: background-color 0.5s;
+    transition: transform .5s;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+
+.services-list div .learn{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    font-weight: 300;
+    display: inline-block;
+    margin-top: 20px;  
+}
+.services-list div:hover{
+    background-color: #ff004f;
+    transform: translateY(-10px);
+}
+.portfolio{
+    padding: 50px 0;
+
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    
+    
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform .5s;
+}
+.work .layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height .5s; 
+}
+.layer h3{
+    margin-bottom: 20px;
+    font-weight: 500;
+   
+}
+.layer p{
+    margin-bottom: 10px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    font-size: 18px;
+    text-decoration: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.work:hover img{
+    transform: scale(1.2);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.contact .container{
+    padding-top: 60px;
+}
+.cont-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+
+}
+.cont-info .left-cont{
+    width: 45%;
+    font-size: 22px;
+    color:white;
+
+}
+
+.left-cont p{
+    margin-bottom: 20px;
+}
+.left-cont i{
+    margin-right: 10px;
+    margin-bottom: 40px;
+}
+.left-cont .CV{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    background:#ff004f;
+    border: none;
+    outline: none;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+.cont-info .right-cont{
+    width: 45%;
+}
+.cont-icon{
+    color: #ff004f;
+    font-size: 20px;
+    margin-top: 30px;
+}
+.cont-icon a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    transition: color .5s;
+   
+    transition: transform .5s;
+    
+}
+.cont-icon a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+   
+}
+
+.right-cont{
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right-cont input{
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+    border: none;
+    background: #3c3b3b;
+   
+    outline: none;
+    width: 600px;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding-left: 5px;
+    box-shadow: inset 0px 5px 14px black;
+}
+.right-cont textarea{
+    width: 600px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: white;
+    background: #3c3b3b;
+    padding: 5px 5px;
+    margin-bottom: 20px;
+    box-shadow: inset 0px 5px 14px black;
+}
+.right-cont button{
+    color: white;
+    background: #ff004f;
+    width: 200px;
+    height: 50px;
+    padding: 10px 10px;
+   
+    outline: none;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    
+}
+.left-cont i{
+    margin-right: 20px;
+}
+.copyright{
+    text-align: center;
+    padding: 20px 20px;
+    background: #3c3b3b;
+    
+}
+.copyright i{
+    color: #ff004f;
+}
+
+
+
+
+
